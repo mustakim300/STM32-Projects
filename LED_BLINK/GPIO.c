@@ -1,6 +1,6 @@
 #include "GPIO.h"
 
-
+/* This function will Enable or Disable the PORT clock */
 void GPIO_CLK(GPIO_Regdef *GPIOx,uint8_t EN_DI)
 {
 	if(EN_DI==ENABLE)
@@ -69,7 +69,7 @@ void GPIO_CLK(GPIO_Regdef *GPIOx,uint8_t EN_DI)
 
 }
 
-
+/* This function will set Mode, Configuration with Pin-number of the PORT  */
 void GPIO_MODE(GPIO_Regdef *GPIOx,uint8_t mode,uint8_t config,uint8_t pin_number)
 {
 	AFIO_CLK_ENABLE();
@@ -119,7 +119,7 @@ void GPIO_MODE(GPIO_Regdef *GPIOx,uint8_t mode,uint8_t config,uint8_t pin_number
      }
 }
 
-
+/* This function will set particular PIN HIGH or LOW  */
 void GPIO_WRITE(GPIO_Regdef *GPIOx,uint8_t state,uint8_t pin_number)
 {
 	if(state==HIGH)
@@ -138,7 +138,7 @@ void GPIO_TOGGLE(GPIO_Regdef *GPIOx,uint8_t pin_number)
 }
 
 
-
+/* This function will Read value at particular PIN */
 uint8_t GPIO_READ(GPIO_Regdef *GPIOx,uint8_t pin_number)
 {
 	uint8_t value;
