@@ -20,6 +20,3 @@ Here you will find all the STM32 projects. In this I have used all the drivers w
 
 
 
-
-
-JINJI
